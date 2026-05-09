@@ -2,7 +2,7 @@ from playwright.sync_api import sync_playwright
 
 def test_google_search():
     with sync_playwright() as p:
-        browser = p.chromium.launch(headless=False) #Luanch the browser
+        browser = p.chromium.launch(headless=True) #Luanch the browser
         page = browser.new_page() #Creates the new tab
 
         page.goto("https://www.google.com") #Navigate to the URL
